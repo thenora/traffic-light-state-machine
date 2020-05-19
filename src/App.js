@@ -37,6 +37,19 @@ const App = () => {
 
     service.onTransition(state => {
       console.log(state);
+      switch (state.value) {
+        case 'red': setLightStatus(RED_LIGHT);
+          // code to run when the machine moves to inactive state
+          break;
+        case 'green': setLightStatus(GREEN_LIGHT);
+          // code to run when the machine goes to active state
+          break;
+        case 'yellow': setLightStatus(YELLOW_LIGHT);
+          // code to run when the machine goes to active state
+          break;
+        default: console.log('ERROR invalid state');
+      }
+      
       // Your code here to change lightStatus when the 
       //   state of the state machine changes
 

@@ -8,6 +8,7 @@ const lightMachine = createMachine({
     red: { on: { changeLight: 'green' } },
     green: { on: { changeLight: 'yellow' } },
     yellow: { on: { changeLight: 'red' } }
+  }
 });
 
 
